@@ -213,7 +213,7 @@ fun ProductCard(
                             letterSpacing = 0.5.sp
                         )
                         Text(
-                            text = "$${String.format(Locale.US, "%.2f", lowestPrice)} / pc",
+                            text = "Rs. ${String.format(Locale.US, "%,.0f", lowestPrice)} / pc",
                             color = FleexPine,
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold

@@ -121,7 +121,7 @@ fun HomeScreen(
                 FullHeroSection(
                     onExploreClick = { selectedCategory = ProductCategory.ALL },
                     onWhatsAppInquiry = {
-                        val message = "Hello Fleex Garments Wholesale Team! I am reviewing your wholesale catalog on fleexgarments.com and would like to request the 2026 digital line-sheet and sample price list."
+                        val message = "Hello Fleex Garments Wholesale Team! I am reviewing your wholesale catalog and would like to request the 2026 digital line-sheet and sample price list in PKR."
                         WhatsAppOrderHelper.launchWhatsApp(context, message)
                     }
                 )

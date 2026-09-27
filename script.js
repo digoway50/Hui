@@ -1,8 +1,9 @@
 // FLEEX GARMENTS WHOLESALE PLATFORM JAVASCRIPT
-const WHATSAPP_PHONE = "15558923412";
-const OFFICIAL_PORTAL = "FLEEXGARMENTS.COM";
+const WHATSAPP_PHONE = "923702265968";
+const WHATSAPP_DISPLAY = "03702265968";
+const OFFICIAL_PORTAL = "FLEEX WHOLESALE";
 
-// 1. PRODUCTS DATA
+// 1. PRODUCTS DATA (IN PAKISTANI RUPEES - PKR)
 const PRODUCTS = [
   {
     id: "flx-hoodie-01",
@@ -14,12 +15,12 @@ const PRODUCTS = [
     composition: "100% Combed Organic Ring-Spun Cotton",
     fit: "Oversized Boxy Silhouette / Dropped Shoulders",
     moq: 50,
-    basePrice: 19.50,
+    basePrice: 5400,
     pricingTiers: [
-      { min: 50, max: 99, price: 19.50, label: "50–99 pcs" },
-      { min: 100, max: 249, price: 17.00, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 14.80, label: "250–499 pcs" },
-      { min: 500, max: null, price: 12.50, label: "500+ pcs" }
+      { min: 50, max: 99, price: 5400, label: "50–99 pcs" },
+      { min: 100, max: 249, price: 4750, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 4100, label: "250–499 pcs" },
+      { min: 500, max: null, price: 3500, label: "500+ pcs" }
     ],
     colors: [
       { name: "Pine Green", hex: "#123F36", pantone: "19-5411 TCX" },
@@ -31,7 +32,7 @@ const PRODUCTS = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     defaultPack: "1:2:2:1 per carton (24 pcs)",
     leadTime: "12–15 business days",
-    samplePrice: 40.00,
+    samplePrice: 11000,
     image: "assets/images/img_hoodie_line.jpg",
     description: "Engineered specifically for high-end boutique streetwear brands. Milled from ultra-dense 500 GSM combed French Terry cotton with brushed interior. Features an oversized double-layered hood without drawstrings, heavy 2x2 ribbed cuffs, and blind hem stitching.",
     highlights: [
@@ -55,12 +56,12 @@ const PRODUCTS = [
     composition: "100% Ring-Spun Combed Cotton",
     fit: "Drop-Shoulder Boxy Cut / Relaxed Width",
     moq: 50,
-    basePrice: 10.50,
+    basePrice: 2900,
     pricingTiers: [
-      { min: 50, max: 99, price: 10.50, label: "50–99 pcs" },
-      { min: 100, max: 249, price: 8.80, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 7.20, label: "250–499 pcs" },
-      { min: 500, max: null, price: 5.90, label: "500+ pcs" }
+      { min: 50, max: 99, price: 2900, label: "50–99 pcs" },
+      { min: 100, max: 249, price: 2450, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 2000, label: "250–499 pcs" },
+      { min: 500, max: null, price: 1650, label: "500+ pcs" }
     ],
     colors: [
       { name: "Linen Oat", hex: "#E8DCC4", pantone: "13-0607 TCX" },
@@ -72,7 +73,7 @@ const PRODUCTS = [
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     defaultPack: "1:2:3:2:1 (S:M:L:XL:2XL)",
     leadTime: "10–12 business days",
-    samplePrice: 25.00,
+    samplePrice: 6800,
     image: "assets/images/img_oversized_tee.jpg",
     description: "The cornerstone blank for premium streetwear labels. Milled at 280 GSM, this heavyweight t-shirt provides a stiff, clean drape that maintains its boxy architecture throughout wear. Features a tight 1.25-inch high-density ribbed collar.",
     highlights: [
@@ -96,12 +97,12 @@ const PRODUCTS = [
     composition: "98% Heavy Cotton Twill, 2% Mechanical Stretch",
     fit: "Relaxed Tapered / Structured Silhouette",
     moq: 50,
-    basePrice: 26.00,
+    basePrice: 7200,
     pricingTiers: [
-      { min: 50, max: 99, price: 26.00, label: "50–99 pcs" },
-      { min: 100, max: 249, price: 22.50, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 19.80, label: "250–499 pcs" },
-      { min: 500, max: null, price: 17.00, label: "500+ pcs" }
+      { min: 50, max: 99, price: 7200, label: "50–99 pcs" },
+      { min: 100, max: 249, price: 6250, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 5500, label: "250–499 pcs" },
+      { min: 500, max: null, price: 4700, label: "500+ pcs" }
     ],
     colors: [
       { name: "Sage Forest", hex: "#2A6B5C", pantone: "18-5612 TCX" },
@@ -112,7 +113,7 @@ const PRODUCTS = [
     sizes: ["30", "32", "34", "36", "38"],
     defaultPack: "1:2:2:1 (30:32:34:36)",
     leadTime: "15–18 business days",
-    samplePrice: 50.00,
+    samplePrice: 14000,
     image: "assets/images/img_cargo_trousers.jpg",
     description: "Elevated utilitarian workwear for modern streetwear brands. Designed with streamlined bellows pockets that lay completely flat when empty, knee darts for ergonomic drape, and antique brass hardware.",
     highlights: [
@@ -136,12 +137,12 @@ const PRODUCTS = [
     composition: "55% Natural French Flax Linen, 45% Combed Cotton",
     fit: "Relaxed Overshirt / Straight Hem",
     moq: 40,
-    basePrice: 24.50,
+    basePrice: 6800,
     pricingTiers: [
-      { min: 40, max: 99, price: 24.50, label: "40–99 pcs" },
-      { min: 100, max: 249, price: 21.00, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 18.50, label: "250–499 pcs" },
-      { min: 500, max: null, price: 15.80, label: "500+ pcs" }
+      { min: 40, max: 99, price: 6800, label: "40–99 pcs" },
+      { min: 100, max: 249, price: 5800, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 5100, label: "250–499 pcs" },
+      { min: 500, max: null, price: 4400, label: "500+ pcs" }
     ],
     colors: [
       { name: "Linen Oat", hex: "#E8DCC4", pantone: "13-0607 TCX" },
@@ -151,7 +152,7 @@ const PRODUCTS = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     defaultPack: "1:2:2:1 (S:M:L:XL)",
     leadTime: "14–16 business days",
-    samplePrice: 45.00,
+    samplePrice: 12500,
     image: "assets/images/img_cargo_trousers.jpg",
     description: "A versatile layering piece crafted from an artisanal flax and combed cotton weave. Delivers breathable structure, natural corozo nut button closures, and understated flat-felled seam construction.",
     highlights: [
@@ -175,12 +176,12 @@ const PRODUCTS = [
     composition: "100% Combed Organic Cotton",
     fit: "Slightly Cropped Boxy Streetwear Silhouette",
     moq: 50,
-    basePrice: 18.00,
+    basePrice: 4950,
     pricingTiers: [
-      { min: 50, max: 99, price: 18.00, label: "50–99 pcs" },
-      { min: 100, max: 249, price: 15.50, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 13.50, label: "250–499 pcs" },
-      { min: 500, max: null, price: 11.20, label: "500+ pcs" }
+      { min: 50, max: 99, price: 4950, label: "50–99 pcs" },
+      { min: 100, max: 249, price: 4300, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 3750, label: "250–499 pcs" },
+      { min: 500, max: null, price: 3100, label: "500+ pcs" }
     ],
     colors: [
       { name: "Pine Green", hex: "#123F36", pantone: "19-5411 TCX" },
@@ -191,7 +192,7 @@ const PRODUCTS = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     defaultPack: "1:2:2:1 (S:M:L:XL)",
     leadTime: "12–15 business days",
-    samplePrice: 38.00,
+    samplePrice: 10500,
     image: "assets/images/img_hoodie_line.jpg",
     description: "Authentic vintage wash aesthetic without sacrificing fabric durability. Crafted with heavy diagonal loopback terry, ribbed triangle gusset at the collar, and wide ribbing at the waist and cuffs.",
     highlights: [
@@ -214,12 +215,12 @@ const PRODUCTS = [
     composition: "100% Long-Staple Cotton",
     fit: "Regular Relaxed / Dropped Hem",
     moq: 50,
-    basePrice: 13.50,
+    basePrice: 3750,
     pricingTiers: [
-      { min: 50, max: 99, price: 13.50, label: "50–99 pcs" },
-      { min: 100, max: 249, price: 11.20, label: "100–249 pcs" },
-      { min: 250, max: 499, price: 9.50, label: "250–499 pcs" },
-      { min: 500, max: null, price: 8.00, label: "500+ pcs" }
+      { min: 50, max: 99, price: 3750, label: "50–99 pcs" },
+      { min: 100, max: 249, price: 3100, label: "100–249 pcs" },
+      { min: 250, max: 499, price: 2650, label: "250–499 pcs" },
+      { min: 500, max: null, price: 2200, label: "500+ pcs" }
     ],
     colors: [
       { name: "Linen Oat", hex: "#E8DCC4", pantone: "13-0607 TCX" },
@@ -229,7 +230,7 @@ const PRODUCTS = [
     sizes: ["S", "M", "L", "XL", "2XL"],
     defaultPack: "1:2:2:1",
     leadTime: "10–14 business days",
-    samplePrice: 30.00,
+    samplePrice: 8500,
     image: "assets/images/img_oversized_tee.jpg",
     description: "Essential thermal base layer with three-dimensional waffle texture for maximum insulation and breathability. Garment-washed for ultra-soft hand feel right out of packaging.",
     highlights: [
@@ -243,6 +244,11 @@ const PRODUCTS = [
     isFeatured: false
   }
 ];
+
+// Helper for formatting PKR currency
+function formatPKR(amount) {
+  return "Rs. " + Math.round(amount).toLocaleString('en-PK');
+}
 
 // 2. WISHLIST MANAGEMENT (LOCAL STORAGE)
 let wishlist = JSON.parse(localStorage.getItem("fleex_wishlist") || '["flx-hoodie-01", "flx-tee-02"]');
@@ -322,7 +328,7 @@ function renderProductLine() {
           <div class="line-card-price-row">
             <div class="price-box">
               <span class="from">BULK TIER FROM</span>
-              <div class="rate">$${p.pricingTiers[p.pricingTiers.length - 1].price.toFixed(2)} / pc</div>
+              <div class="rate">${formatPKR(p.pricingTiers[p.pricingTiers.length - 1].price)} / pc</div>
             </div>
             <button class="btn-card-specs">View Specs <i class="fa-solid fa-arrow-right"></i></button>
           </div>
@@ -332,47 +338,87 @@ function renderProductLine() {
   `).join("");
 }
 
+let displayedProducts = [];
+let isLoadingMoreProducts = false;
+
+function createProductCardHTML(p) {
+  const isWish = wishlist.includes(p.id);
+  const lowest = p.pricingTiers[p.pricingTiers.length - 1].price;
+  return `
+    <div class="product-card" onclick="openProductModal('${p.id}')">
+      <div class="card-img-box">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+        <button class="btn-wishlist ${isWish ? 'active' : ''}" onclick="toggleWishlist('${p.id}', event)">
+          <i class="${isWish ? 'fa-solid' : 'fa-regular'} fa-bookmark"></i>
+        </button>
+        <div style="position:absolute; bottom:6px; left:6px; display:flex; gap:4px;">
+          <span class="gsm-pill">${p.gsm} GSM</span>
+          <span class="moq-pill">MOQ ${p.moq}</span>
+        </div>
+      </div>
+      <div class="card-info">
+        <span class="card-category">${p.category}</span>
+        <h3 class="card-title">${p.name}</h3>
+        <p class="card-composition">${p.composition}</p>
+        <div class="card-bottom-row">
+          <div>
+            <div style="font-size:9px; font-weight:700; color:var(--fleex-text-muted);">FROM</div>
+            <div class="rate" style="font-size:14px; font-weight:800; color:var(--fleex-pine);">${formatPKR(lowest)} / pc</div>
+          </div>
+          <div class="color-dots">
+            ${p.colors.slice(0, 3).map(c => `<span class="color-dot" style="background-color:${c.hex};" title="${c.name}"></span>`).join("")}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function getCategorySource() {
+  return currentCategory === "ALL" 
+    ? PRODUCTS 
+    : PRODUCTS.filter(p => p.category === currentCategory);
+}
+
 function renderProducts() {
   const grid = document.getElementById("product-grid");
   if (!grid) return;
 
-  const filtered = currentCategory === "ALL" 
-    ? PRODUCTS 
-    : PRODUCTS.filter(p => p.category === currentCategory);
+  const source = getCategorySource();
+  displayedProducts = [...source];
+  grid.innerHTML = displayedProducts.map(p => createProductCardHTML(p)).join("");
+}
 
-  grid.innerHTML = filtered.map(p => {
-    const isWish = wishlist.includes(p.id);
-    const lowest = p.pricingTiers[p.pricingTiers.length - 1].price;
-    return `
-      <div class="product-card" onclick="openProductModal('${p.id}')">
-        <div class="card-img-box">
-          <img src="${p.image}" alt="${p.name}">
-          <button class="btn-wishlist ${isWish ? 'active' : ''}" onclick="toggleWishlist('${p.id}', event)">
-            <i class="${isWish ? 'fa-solid' : 'fa-regular'} fa-bookmark"></i>
-          </button>
-          <div style="position:absolute; bottom:8px; left:8px; display:flex; gap:6px;">
-            <span class="gsm-pill">${p.gsm} GSM</span>
-            <span class="moq-pill">MOQ ${p.moq}</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <span class="card-category">${p.category}</span>
-          <h3 class="card-title">${p.name}</h3>
-          <p class="card-composition">${p.composition}</p>
-          <div class="card-bottom-row">
-            <div>
-              <div style="font-size:9px; font-weight:700; color:var(--fleex-text-muted);">FROM</div>
-              <div style="font-size:14px; font-weight:800; color:var(--fleex-pine);">$${lowest.toFixed(2)} / pc</div>
-            </div>
-            <div class="color-dots">
-              ${p.colors.slice(0, 3).map(c => `<span class="color-dot" style="background-color:${c.hex};" title="${c.name}"></span>`).join("")}
-              ${p.colors.length > 3 ? `<span style="font-size:10px; font-weight:700; color:var(--fleex-text-muted);">+${p.colors.length - 3}</span>` : ''}
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }).join("");
+function loadMoreInfiniteProducts() {
+  if (isLoadingMoreProducts) return;
+  const homeTab = document.getElementById("tab-home");
+  if (!homeTab || !homeTab.classList.contains("active")) return;
+
+  const grid = document.getElementById("product-grid");
+  const loader = document.getElementById("infinite-scroll-loader");
+  if (!grid) return;
+
+  const source = getCategorySource();
+  if (source.length === 0) return;
+
+  isLoadingMoreProducts = true;
+  if (loader) loader.style.display = "flex";
+
+  setTimeout(() => {
+    // Append batch of products infinitely
+    const batch = source.map(item => ({
+      ...item,
+      uniqueId: item.id + "_" + Math.random().toString(36).substring(2, 7)
+    }));
+    displayedProducts = displayedProducts.concat(batch);
+    
+    // Append cards directly to DOM for optimal performance
+    const newCardsHTML = batch.map(p => createProductCardHTML(p)).join("");
+    grid.insertAdjacentHTML("beforeend", newCardsHTML);
+
+    if (loader) loader.style.display = "none";
+    isLoadingMoreProducts = false;
+  }, 450);
 }
 
 function filterCategory(cat) {
@@ -454,7 +500,7 @@ function handleSearch() {
           <div class="card-bottom-row">
             <div>
               <div style="font-size:9px; font-weight:700; color:var(--fleex-text-muted);">FROM</div>
-              <div style="font-size:14px; font-weight:800; color:var(--fleex-pine);">$${lowest.toFixed(2)} / pc</div>
+              <div style="font-size:14px; font-weight:800; color:var(--fleex-pine);">${formatPKR(lowest)} / pc</div>
             </div>
             <div class="color-dots">
               ${p.colors.map(c => `<span class="color-dot" style="background-color:${c.hex};" title="${c.name}"></span>`).join("")}
@@ -495,7 +541,7 @@ function renderWishlist() {
         <div class="wishlist-item-info">
           <h4>${p.name}</h4>
           <p style="font-size:11px; color:var(--fleex-sage); font-weight:700;">${p.gsm} GSM • SKU: ${p.sku}</p>
-          <p>Tier Starting from $${p.pricingTiers[p.pricingTiers.length - 1].price.toFixed(2)}/pc • MOQ ${p.moq} pcs</p>
+          <p>Tier Starting from ${formatPKR(p.pricingTiers[p.pricingTiers.length - 1].price)}/pc • MOQ ${p.moq} pcs</p>
         </div>
         <button class="btn-remove-wishlist" onclick="toggleWishlist('${p.id}', event)" title="Remove style">
           <i class="fa-solid fa-trash"></i>
@@ -575,13 +621,13 @@ function renderModalContent() {
 
         <!-- Tiered Pricing Matrix -->
         <div class="tier-table-box">
-          <h4>VOLUME TIER PRICING (USD)</h4>
+          <h4>VOLUME TIER PRICING (PKR - PAKISTANI RUPEES)</h4>
           ${p.pricingTiers.map(t => {
             const isActive = modalQuantity >= t.min && (t.max === null || modalQuantity <= t.max);
             return `
               <div class="tier-row ${isActive ? 'active' : ''}">
                 <span>${t.label}</span>
-                <span class="tier-price">$${t.price.toFixed(2)} / unit</span>
+                <span class="tier-price">${formatPKR(t.price)} / unit</span>
               </div>
             `;
           }).join("")}
@@ -635,7 +681,7 @@ function renderModalContent() {
         <div class="order-summary-box">
           <div class="summary-row">
             <span>Unit Wholesale Rate:</span>
-            <span style="font-weight:700; color:var(--fleex-gold);">$${unitRate.toFixed(2)} / pc</span>
+            <span style="font-weight:700; color:var(--fleex-gold);">${formatPKR(unitRate)} / pc</span>
           </div>
           <div class="summary-row">
             <span>Order Quantity:</span>
@@ -643,19 +689,19 @@ function renderModalContent() {
           </div>
           <div class="summary-total">
             <span>ESTIMATED SUBTOTAL:</span>
-            <span class="total-amount">$${totalSubtotal.toLocaleString('en-US', { minimumFractionDigits: 2 })} USD</span>
+            <span class="total-amount">${formatPKR(totalSubtotal)} PKR</span>
           </div>
         </div>
 
         <!-- Direct WhatsApp Order Button -->
         <button class="btn-whatsapp-order-modal" onclick="sendWhatsAppOrder()">
           <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
-          <span>Direct Order via WhatsApp</span>
+          <span>Direct Order via WhatsApp (PKR)</span>
         </button>
 
         <!-- Secondary Action: Fit Sample -->
         <button class="btn-primary" style="width:100%; margin-top:8px; background:none; color:var(--fleex-pine); border-color:var(--fleex-pine);" onclick="sendSampleInquiry()">
-          Request Single Fit Sample ($${p.samplePrice.toFixed(2)}) via WhatsApp
+          Request Single Fit Sample (${formatPKR(p.samplePrice)}) via WhatsApp
         </button>
       </div>
     </div>
@@ -683,7 +729,7 @@ function setPresetQty(qty) {
   renderModalContent();
 }
 
-// 8. WHATSAPP LAUNCHERS & ENCODERS
+// 8. WHATSAPP LAUNCHERS & ENCODERS (WITH PAKISTANI RUPEES)
 function sendWhatsAppOrder() {
   const p = modalActiveProduct;
   if (!p) return;
@@ -701,8 +747,8 @@ Official Portal: ${OFFICIAL_PORTAL}
 • *Selected Color:* ${modalSelectedColor}
 • *Size Pack / Focus:* ${modalSelectedSize} (Ratio: ${p.defaultPack})
 • *Order Volume:* ${modalQuantity} units (MOQ: ${p.moq} pcs)
-• *Wholesale Rate:* $${unitRate.toFixed(2)} / unit
-• *Estimated Subtotal:* $${totalSubtotal.toFixed(2)} USD
+• *Wholesale Rate:* ${formatPKR(unitRate)} / unit
+• *Estimated Subtotal:* ${formatPKR(totalSubtotal)} PKR
 • *Private Label / Tags:* ${modalCustomBranding ? "Yes (Custom woven labels & polybags)" : "Blank Blanks"}
 • *Estimated Lead Time:* ${p.leadTime}
 ────────────────────────
@@ -721,8 +767,8 @@ function sendSampleInquiry() {
 I would like to order a sample piece of *${p.name}* (SKU: ${p.sku})
 • Color: ${modalSelectedColor}
 • Size: ${modalSelectedSize}
-• Sample Price: $${p.samplePrice.toFixed(2)} USD
-Please send payment details for immediate DHL dispatch.`;
+• Sample Price: ${formatPKR(p.samplePrice)} PKR
+Please send payment details for immediate dispatch.`;
 
   const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
@@ -732,9 +778,9 @@ function requestMultiStyleQuote() {
   const saved = PRODUCTS.filter(p => wishlist.includes(p.id));
   if (saved.length === 0) return;
 
-  let text = `📦 *FLEEX GARMENTS • MULTI-STYLE WHOLESALE INQUIRY*\nOfficial Portal: ${OFFICIAL_PORTAL}\nI would like to request bulk quotations and line-sheet specs for the following saved styles:\n\n`;
+  let text = `📦 *FLEEX GARMENTS • MULTI-STYLE WHOLESALE INQUIRY*\nOfficial Portal: ${OFFICIAL_PORTAL}\nI would like to request bulk quotations and line-sheet specs for the following saved styles in Pakistani Rupees (PKR):\n\n`;
   saved.forEach((p, idx) => {
-    text += `${idx + 1}. *${p.name}* (SKU: ${p.sku})\n   • Weight: ${p.gsm} GSM | MOQ: ${p.moq} pcs\n   • Starting Rate: $${p.basePrice.toFixed(2)}/pc\n`;
+    text += `${idx + 1}. *${p.name}* (SKU: ${p.sku})\n   • Weight: ${p.gsm} GSM | MOQ: ${p.moq} pcs\n   • Starting Rate: ${formatPKR(p.basePrice)}/pc\n`;
   });
   text += `\nPlease send complete volume tier price sheets and sample swatches catalog.\nThank you!`;
 
@@ -777,10 +823,19 @@ function saveProfile(e) {
   toggleEditProfile();
 }
 
-// 10. INITIALIZATION
+// 10. INITIALIZATION & INFINITE SCROLL LISTENER
 document.addEventListener("DOMContentLoaded", () => {
   renderProductLine();
   renderProducts();
   handleSearch();
   updateWishlistBadges();
+
+  // Infinite Scroll Listener for Products Grid
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const threshold = document.documentElement.scrollHeight - 380;
+    if (scrollPosition >= threshold) {
+      loadMoreInfiniteProducts();
+    }
+  }, { passive: true });
 });

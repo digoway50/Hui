@@ -366,7 +366,7 @@ fun WhatsAppOrderSheet(
                 Spacer(modifier = Modifier.height(6.dp))
                 val needed = nextTier.minQty - orderQuantity
                 Text(
-                    text = "💡 Add $needed more pcs to unlock $${String.format(Locale.US, "%.2f", nextTier.pricePerUnit)}/pc rate!",
+                    text = "💡 Add $needed more pcs to unlock Rs. ${String.format(Locale.US, "%,.0f", nextTier.pricePerUnit)}/pc rate!",
                     color = FleexGold,
                     fontSize = 11.sp,
                     fontWeight = FontWeight.SemiBold
@@ -449,7 +449,7 @@ fun WhatsAppOrderSheet(
                             fontSize = 12.sp
                         )
                         Text(
-                            text = "$${String.format(Locale.US, "%.2f", unitPrice)} / unit",
+                            text = "Rs. ${String.format(Locale.US, "%,.0f", unitPrice)} / unit",
                             color = FleexGold,
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold
@@ -493,7 +493,7 @@ fun WhatsAppOrderSheet(
                                 letterSpacing = 1.sp
                             )
                             Text(
-                                text = "$${String.format(Locale.US, "%,.2f", estimatedTotal)} USD",
+                                text = "Rs. ${String.format(Locale.US, "%,.0f", estimatedTotal)} PKR",
                                 color = FleexCream,
                                 fontSize = 20.sp,
                                 fontWeight = FontWeight.Bold,

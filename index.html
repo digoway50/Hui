@@ -11,15 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
   <!-- TOP ANNOUNCEMENT BAR -->
   <header class="announcement-bar">
     <div class="announcement-content">
-      <span><i class="fa-solid fa-cube"></i> B2B WHOLESALE DIRECT • LOW MOQ 50 PCS • GLOBAL DDP SHIPPING</span>
-      <span class="portal-badge">FLEEXGARMENTS.COM</span>
+      <span><i class="fa-solid fa-cube"></i> B2B WHOLESALE DIRECT • LOW MOQ 50 PCS • GLOBAL SHIPPING</span>
+      <span class="portal-badge">FLEEX WHOLESALE</span>
     </div>
   </header>
 
@@ -27,10 +27,8 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-brand" onclick="navigateTo('home')">
-        <div class="brand-monogram">F</div>
         <div class="brand-text">
           <span class="brand-title">FLEEX</span>
-          <span class="brand-sub">FLEEXGARMENTS.COM</span>
         </div>
       </div>
 
@@ -158,6 +156,12 @@
         <!-- Product Grid -->
         <div class="product-grid" id="product-grid">
           <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Infinite Scroll Loader -->
+        <div id="infinite-scroll-loader" class="infinite-scroll-loader" style="display:none;">
+          <div class="spinner"></div>
+          <span>Loading more wholesale styles...</span>
         </div>
       </section>
 
@@ -326,12 +330,12 @@
         <!-- Factory WhatsApp Hotline -->
         <div class="account-card hotline-card">
           <div class="hotline-badge"><i class="fa-brands fa-whatsapp"></i> DIRECT FACTORY LINE</div>
-          <h3>WhatsApp Wholesale Desk: +1 (555) 892-3412</h3>
+          <h3>WhatsApp Wholesale Desk: 03702265968</h3>
           <p>
             Connect directly with our senior merchandising team to coordinate physical fabric swatches, digital tech packs, sample proofs, and container shipment tracking.
           </p>
           <button class="btn-whatsapp-banner" onclick="openDirectWholesaleChat('Buyer Wholesale Account Inquiry')">
-            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now (03702265968)
           </button>
         </div>
 
@@ -345,7 +349,7 @@
             </details>
             <details class="faq-item">
               <summary>How does Sample Ordering work?</summary>
-              <p>Individual fit and fabric sample pieces are dispatched via DHL Express in 5–7 business days ($25–$50 per unit depending on silhouette). 100% of sample fees are credited toward your subsequent bulk run.</p>
+              <p>Individual fit and fabric sample pieces are dispatched via DHL Express in 5–7 business days (Rs. 7,000–Rs. 14,000 per unit depending on silhouette). 100% of sample fees are credited toward your subsequent bulk run.</p>
             </details>
             <details class="faq-item">
               <summary>Private Labeling & Custom Packaging</summary>
@@ -399,8 +403,7 @@
     <div class="footer-container">
       <div class="footer-col brand-col">
         <div class="footer-brand">FLEEX</div>
-        <div class="footer-sub">FLEEXGARMENTS.COM</div>
-        <p>Premium wholesale apparel manufacturer specializing in custom heavyweight fleece, oversized cotton basics, and tailored streetwear silhouettes for worldwide boutique labels.</p>
+        <p>Premium wholesale apparel manufacturer specializing in custom heavyweight fleece, oversized cotton basics, and tailored streetwear silhouettes for boutique labels.</p>
       </div>
 
       <div class="footer-col">
@@ -415,17 +418,16 @@
 
       <div class="footer-col">
         <h4>Direct Wholesale Contact</h4>
-        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +1 (555) 892-3412</p>
-        <p><i class="fa-solid fa-envelope"></i> wholesale@fleexgarments.com</p>
-        <p><i class="fa-solid fa-globe"></i> Official Portal: FLEEXGARMENTS.COM</p>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: 03702265968</p>
+        <p><i class="fa-solid fa-clock"></i> Mon–Sat: 9:00 AM – 9:00 PM PKT</p>
         <p><i class="fa-solid fa-location-dot"></i> Factory Milling & Export Division</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Fleex Garments Wholesale International. All rights reserved. Colors: #123F36 • #2A6B5C • #C49A45 • #E8DCC4.</p>
+      <p>© 2026 Fleex Garments Wholesale. All rights reserved. Direct Orders via WhatsApp: 03702265968.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

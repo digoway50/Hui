@@ -347,7 +347,7 @@ fun ProductDetailScreen(
                                     horizontalArrangement = Arrangement.SpaceBetween
                                 ) {
                                     Text("VOLUME TIER", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = FleexTextSecondary)
-                                    Text("UNIT PRICE (USD)", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = FleexTextSecondary)
+                                    Text("UNIT PRICE (PKR)", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = FleexTextSecondary)
                                 }
 
                                 Spacer(modifier = Modifier.height(8.dp))
@@ -384,7 +384,7 @@ fun ProductDetailScreen(
                                         }
 
                                         Text(
-                                            text = "$${String.format(Locale.US, "%.2f", tier.pricePerUnit)} / pc",
+                                            text = "Rs. ${String.format(Locale.US, "%,.0f", tier.pricePerUnit)} / pc",
                                             color = if (isTierActive) FleexGold else FleexPine,
                                             fontSize = 14.sp,
                                             fontWeight = FontWeight.Bold
@@ -623,7 +623,7 @@ fun ProductDetailScreen(
                         // Order Sample Piece Option
                         OutlinedButton(
                             onClick = {
-                                val sampleMsg = "Hello Fleex Garments Wholesale! I would like to order a sample piece of *${product.name}* (SKU: ${product.sku}), Color: $selectedColor, Size: $selectedSize for $${String.format(Locale.US, "%.2f", product.samplePrice)} USD before placing our bulk run."
+                                val sampleMsg = "Hello Fleex Garments Wholesale! I would like to order a sample piece of *${product.name}* (SKU: ${product.sku}), Color: $selectedColor, Size: $selectedSize for Rs. ${String.format(Locale.US, "%,.0f", product.samplePrice)} PKR before placing our bulk run."
                                 WhatsAppOrderHelper.launchWhatsApp(context, sampleMsg)
                             },
                             modifier = Modifier
@@ -636,7 +636,7 @@ fun ProductDetailScreen(
                             border = androidx.compose.foundation.BorderStroke(1.dp, FleexPine)
                         ) {
                             Text(
-                                text = "Request Single Fit Sample ($${String.format(Locale.US, "%.2f", product.samplePrice)}) via WhatsApp",
+                                text = "Request Single Fit Sample (Rs. ${String.format(Locale.US, "%,.0f", product.samplePrice)}) via WhatsApp",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -711,13 +711,13 @@ fun ProductDetailScreen(
                 ) {
                     Column {
                         Text(
-                            text = "$orderQuantity UNITS @ $${String.format(Locale.US, "%.2f", currentUnitPrice)}/pc",
+                            text = "$orderQuantity UNITS @ Rs. ${String.format(Locale.US, "%,.0f", currentUnitPrice)}/pc",
                             color = FleexCream.copy(alpha = 0.8f),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium
                         )
                         Text(
-                            text = "$${String.format(Locale.US, "%,.2f", estimatedTotal)} USD",
+                            text = "Rs. ${String.format(Locale.US, "%,.0f", estimatedTotal)} PKR",
                             color = FleexGold,
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,

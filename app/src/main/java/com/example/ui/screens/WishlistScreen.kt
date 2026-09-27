@@ -305,7 +305,7 @@ fun WishlistScreen(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
-                                        text = "From $${String.format(Locale.US, "%.2f", product.pricingTiers.last().pricePerUnit)}/pc",
+                                        text = "From Rs. ${String.format(Locale.US, "%,.0f", product.pricingTiers.last().pricePerUnit)}/pc",
                                         color = FleexGold,
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Bold

@@ -241,7 +241,7 @@ fun ProductLineCard(
                             fontWeight = FontWeight.Bold
                         )
                         Text(
-                            text = "$${String.format(Locale.US, "%.2f", lowest)} / pc",
+                            text = "Rs. ${String.format(Locale.US, "%,.0f", lowest)} / pc",
                             color = FleexGold,
                             fontSize = 15.sp,
                             fontWeight = FontWeight.Bold

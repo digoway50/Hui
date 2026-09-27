@@ -8,13 +8,18 @@ import android.net.Uri
 import android.widget.Toast
 import com.example.model.Product
 import java.net.URLEncoder
+import java.text.NumberFormat
 import java.util.Locale
 
 object WhatsAppOrderHelper {
-    // Official Fleex Garments Wholesale WhatsApp Line
-    const val WHATSAPP_PHONE_NUMBER = "15558923412" // Configurable wholesale hotline
-    const val WHATSAPP_DISPLAY_NUMBER = "+1 (555) 892-3412"
-    const val OFFICIAL_WEBSITE = "FLEEXGARMENTS.COM"
+    // Official Fleex Garments Wholesale WhatsApp Line (Pakistan)
+    const val WHATSAPP_PHONE_NUMBER = "923702265968"
+    const val WHATSAPP_DISPLAY_NUMBER = "03702265968"
+    const val OFFICIAL_WEBSITE = "FLEEX WHOLESALE"
+
+    fun formatPKR(amount: Double): String {
+        return "Rs. " + NumberFormat.getNumberInstance(Locale.US).format(amount.toLong())
+    }
 
     fun generateOrderMessage(
         product: Product,
@@ -37,8 +42,8 @@ object WhatsAppOrderHelper {
             append("• *Selected Color:* $selectedColor\n")
             append("• *Size Pack / Distribution:* $selectedSizeSummary\n")
             append("• *Order Volume:* $quantity units (MOQ: ${product.moq} pcs)\n")
-            append("• *Wholesale Rate:* $${String.format(Locale.US, "%.2f", unitPrice)} / unit\n")
-            append("• *Estimated Subtotal:* $${String.format(Locale.US, "%.2f", estimatedTotal)} USD\n")
+            append("• *Wholesale Rate:* ${formatPKR(unitPrice)} / unit\n")
+            append("• *Estimated Subtotal:* ${formatPKR(estimatedTotal)} PKR\n")
             append("• *Private Label / Tags:* ${if (customBranding) "Yes (Woven neck labels & custom polybags)" else "Blank standard"}\n")
             append("• *Estimated Lead Time:* ${product.leadTime}\n")
             if (buyerNotes.isNotBlank()) {
@@ -55,11 +60,11 @@ object WhatsAppOrderHelper {
         return buildString {
             append("📦 *FLEEX GARMENTS • MULTI-PRODUCT WHOLESALE INQUIRY*\n")
             append("Official Portal: $OFFICIAL_WEBSITE\n")
-            append("I would like to request bulk quotations and line-sheet specs for the following saved styles:\n\n")
+            append("I would like to request bulk quotations and line-sheet specs for the following saved styles in Pakistani Rupees (PKR):\n\n")
             products.forEachIndexed { index, product ->
                 append("${index + 1}. *${product.name}* (SKU: ${product.sku})\n")
                 append("   • Weight: ${product.gsm} GSM | MOQ: ${product.moq} pcs\n")
-                append("   • Starting Rate: $${String.format(Locale.US, "%.2f", product.basePrice)}/pc\n")
+                append("   • Starting Rate: ${formatPKR(product.basePrice)}/pc\n")
             }
             append("\nPlease send complete bulk volume price sheets and sample swatches catalog.\n")
             append("Thank you!")
@@ -86,7 +91,6 @@ object WhatsAppOrderHelper {
         try {
             context.startActivity(intent)
         } catch (e: Exception) {
-            // If WhatsApp is not installed, copy message and show Toast with option to open web
             val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
             clipboard?.setPrimaryClip(ClipData.newPlainText("Fleex Garments Order", message))
             Toast.makeText(

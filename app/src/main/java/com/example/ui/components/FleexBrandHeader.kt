@@ -1,16 +1,12 @@
 package com.example.ui.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -26,20 +22,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.R
 import com.example.ui.theme.FleexCream
 import com.example.ui.theme.FleexGold
 import com.example.ui.theme.FleexPine
 import com.example.ui.theme.FleexPineDark
-import com.example.ui.theme.FleexSage
 
 @Composable
 fun FleexBrandHeader(
@@ -58,61 +49,31 @@ fun FleexBrandHeader(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Brand Logo & Subtitle
+            // Clean Branding Title without logo or domain
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Circular Monogram Icon
+                Text(
+                    text = "FLEEX",
+                    color = FleexCream,
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.Serif,
+                    letterSpacing = 2.5.sp
+                )
+                Spacer(modifier = Modifier.width(8.dp))
                 Box(
                     modifier = Modifier
-                        .size(38.dp)
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(FleexPineDark)
-                        .border(1.dp, FleexGold.copy(alpha = 0.5f), RoundedCornerShape(8.dp)),
-                    contentAlignment = Alignment.Center
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(FleexGold)
+                        .padding(horizontal = 6.dp, vertical = 2.dp)
                 ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.img_app_icon),
-                        contentDescription = "Fleex Garments Logo",
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.size(34.dp)
-                    )
-                }
-
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            text = "FLEEX",
-                            color = FleexCream,
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily.Serif,
-                            letterSpacing = 2.sp
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(4.dp))
-                                .background(FleexGold)
-                                .padding(horizontal = 5.dp, vertical = 2.dp)
-                        ) {
-                            Text(
-                                text = "B2B WHOLESALE",
-                                color = FleexPineDark,
-                                fontSize = 8.sp,
-                                fontWeight = FontWeight.ExtraBold,
-                                letterSpacing = 0.5.sp
-                            )
-                        }
-                    }
                     Text(
-                        text = "FLEEXGARMENTS.COM",
-                        color = FleexCream.copy(alpha = 0.75f),
+                        text = "WHOLESALE",
+                        color = FleexPineDark,
                         fontSize = 9.sp,
-                        fontWeight = FontWeight.Medium,
-                        letterSpacing = 1.5.sp
+                        fontWeight = FontWeight.ExtraBold,
+                        letterSpacing = 0.5.sp
                     )
                 }
             }

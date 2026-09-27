@@ -91,23 +91,7 @@ a {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
   cursor: pointer;
-}
-
-.brand-monogram {
-  width: 40px;
-  height: 40px;
-  background-color: var(--fleex-pine-dark);
-  border: 1.5px solid var(--fleex-gold);
-  color: var(--fleex-cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: bold;
-  border-radius: 8px;
 }
 
 .brand-text {
@@ -118,17 +102,10 @@ a {
 .brand-title {
   color: var(--fleex-cream);
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 1.1;
-}
-
-.brand-sub {
-  color: var(--fleex-gold);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
 }
 
 .nav-menu {
@@ -553,6 +530,85 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
+}
+
+/* 2 Products in 1 row on mobile & tablets */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px 30px;
+  }
+  
+  .product-card {
+    border-radius: 10px;
+  }
+  
+  .card-info {
+    padding: 10px 8px 12px;
+  }
+  
+  .card-category {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-title {
+    font-size: 13px;
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+  
+  .card-composition {
+    font-size: 10px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .btn-wishlist {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    top: 6px;
+    right: 6px;
+  }
+  
+  .gsm-pill, .moq-pill {
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+  
+  .card-bottom-row .rate {
+    font-size: 13px !important;
+  }
+}
+
+/* INFINITE SCROLL LOADER */
+.infinite-scroll-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 0 40px;
+  color: var(--fleex-sage);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.infinite-scroll-loader .spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(196, 154, 69, 0.25);
+  border-top-color: var(--fleex-gold);
+  border-radius: 50%;
+  animation: fleexSpin 0.75s linear infinite;
+}
+
+@keyframes fleexSpin {
+  to { transform: rotate(360deg); }
 }
 
 /* PRODUCT CARD */

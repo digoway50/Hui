@@ -335,7 +335,7 @@ fun AccountScreen(
                     )
                     FaqCard(
                         question = "How does Sampling work?",
-                        answer = "Single fit & fabric sample pieces are dispatched via DHL Express in 5–7 business days ($25–$50/piece depending on silhouette). 100% of sample fees are credited toward your subsequent bulk run."
+                        answer = "Single fit & fabric sample pieces are dispatched via DHL Express in 5–7 business days (Rs. 7,000–Rs. 14,000/piece depending on silhouette). 100% of sample fees are credited toward your subsequent bulk run."
                     )
                     FaqCard(
                         question = "What Private Labeling options are provided?",
@@ -375,7 +375,7 @@ fun AccountScreen(
                         }
                         Spacer(modifier = Modifier.height(10.dp))
                         Text(
-                            text = "Fleex Garments International Ltd. • All orders verified under fleexgarments.com wholesale charter.",
+                            text = "Fleex Garments International Ltd. • All orders verified under Fleex Wholesale charter.",
                             color = FleexTextSecondary,
                             fontSize = 10.sp,
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center,
