@@ -1,0 +1,6 @@
+{
+  "name": "Fleex Garments",
+  "description": "Modern wholesale e-commerce platform for Fleex Garments with direct WhatsApp ordering, catalog line, bulk tiers, and inquiries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
