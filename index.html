@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleex Garments | Luxury B2B Wholesale Apparel</title>
+  <meta name="description" content="Fleex Garments Wholesale - Modern, responsive wholesale e-commerce platform for architectural silhouettes, heavyweight fleece, and basics. Direct WhatsApp ordering.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <header class="announcement-bar">
+    <div class="announcement-content">
+      <span><i class="fa-solid fa-cube"></i> B2B WHOLESALE DIRECT • LOW MOQ 50 PCS • GLOBAL DDP SHIPPING</span>
+      <span class="portal-badge">FLEEXGARMENTS.COM</span>
+    </div>
+  </header>
+
+  <!-- NAVIGATION HEADER -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand" onclick="navigateTo('home')">
+        <div class="brand-monogram">F</div>
+        <div class="brand-text">
+          <span class="brand-title">FLEEX</span>
+          <span class="brand-sub">FLEEXGARMENTS.COM</span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu">
+        <li class="nav-item active" data-tab="home" onclick="navigateTo('home')">
+          <i class="fa-solid fa-house"></i> Home
+        </li>
+        <li class="nav-item" data-tab="search" onclick="navigateTo('search')">
+          <i class="fa-solid fa-magnifying-glass"></i> Search & Filter
+        </li>
+        <li class="nav-item" data-tab="wishlist" onclick="navigateTo('wishlist')">
+          <i class="fa-solid fa-bookmark"></i> Wishlist
+          <span class="badge" id="wishlist-badge">0</span>
+        </li>
+        <li class="nav-item" data-tab="account" onclick="navigateTo('account')">
+          <i class="fa-solid fa-building"></i> Account & Terms
+        </li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-whatsapp-header" onclick="openDirectWholesaleChat()">
+          <i class="fa-brands fa-whatsapp"></i> <span>Wholesale Desk</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN VIEW CONTAINERS -->
+  <main id="app-container">
+
+    <!-- TAB 1: HOME PAGE -->
+    <section id="tab-home" class="page-tab active">
+      <!-- FULL-SCREEN HERO SECTION -->
+      <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="gold-pill">COLLECTION 2026</span>
+            <span class="tag-label">DIRECT MILL EXPORT</span>
+          </div>
+          <h1 class="hero-headline">Architectural Silhouettes & Heavyweight Fleece</h1>
+          <p class="hero-subtext">
+            Custom-milled luxury blanks engineered for boutique streetwear and designer apparel brands.
+            Low MOQ 50 units. Turnkey custom private labeling, pigment dyes, and instant WhatsApp volume ordering.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary-hero" onclick="scrollToGrid()">
+              <i class="fa-solid fa-layer-group"></i> Explore Catalog
+            </button>
+            <button class="btn-whatsapp-hero" onclick="openDirectWholesaleChat()">
+              <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST STRIP -->
+      <div class="trust-strip">
+        <div class="trust-item">
+          <i class="fa-solid fa-certificate"></i>
+          <div>
+            <h4>Custom Milled Fabrics</h4>
+            <p>280–500 GSM Heavy French Terry & Jersey</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <div>
+            <h4>Low Wholesale MOQ</h4>
+            <p>50 Units per style with split sizes</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-tag"></i>
+          <div>
+            <h4>Custom Private Label</h4>
+            <p>Woven labels, care tags & custom polybags</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <i class="fa-solid fa-plane-departure"></i>
+          <div>
+            <h4>Worldwide Freight</h4>
+            <p>DDP Express Air & Sea Cargo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMOOTH SCROLLING PRODUCT LINE SECTION -->
+      <section class="product-line-section">
+        <div class="section-header">
+          <div>
+            <span class="section-label">SIGNATURE SILHOUETTES</span>
+            <h2 class="section-title">Wholesale Product Line</h2>
+          </div>
+          <span class="scroll-hint"><i class="fa-solid fa-arrows-left-right"></i> Swipe / Scroll Line</span>
+        </div>
+
+        <div class="product-line-carousel" id="product-line-carousel">
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </section>
+
+      <!-- CATEGORIZED PRODUCT GRID SECTION -->
+      <section class="catalog-section" id="catalog-section">
+        <div class="section-header">
+          <div>
+            <span class="section-label">CURATED DIRECTORY</span>
+            <h2 class="section-title">Categorized Wholesale Blanks</h2>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs" id="category-tabs">
+          <button class="category-tab active" data-category="ALL" onclick="filterCategory('ALL')">All Products</button>
+          <button class="category-tab" data-category="HOODIES" onclick="filterCategory('HOODIES')">Hoodies & Fleece</button>
+          <button class="category-tab" data-category="TEES" onclick="filterCategory('TEES')">Oversized Tees</button>
+          <button class="category-tab" data-category="TROUSERS" onclick="filterCategory('TROUSERS')">Pants & Trousers</button>
+          <button class="category-tab" data-category="OVERSHIRTS" onclick="filterCategory('OVERSHIRTS')">Overshirts & Outerwear</button>
+          <button class="category-tab" data-category="KNITS" onclick="filterCategory('KNITS')">Basics & Knits</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- BESPOKE MANUFACTURING CALLOUT BANNER -->
+      <section class="bespoke-banner">
+        <div class="bespoke-content">
+          <span class="gold-pill">FLEEX BESPOKE MILLING</span>
+          <h2>Need Custom GSM, Proprietary Colors, or Tech-Pack Development?</h2>
+          <p>
+            We supply end-to-end custom production for established apparel brands: custom loopback weights (300 to 650 GSM), custom Pantone TCX dyeing, high-density screen printing, chenille embroidery, and export-grade finishing.
+          </p>
+          <button class="btn-whatsapp-banner" onclick="openDirectWholesaleChat('Bespoke custom production inquiry')">
+            <i class="fa-brands fa-whatsapp"></i> Chat with Production Director
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <!-- TAB 2: SEARCH & FILTER PAGE -->
+    <section id="tab-search" class="page-tab">
+      <div class="search-header-container">
+        <span class="section-label">CATALOG EXPLORER</span>
+        <h2>Search & Filter Garments</h2>
+        <div class="search-input-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search by silhouette, GSM weight, yarn, SKU..." oninput="handleSearch()">
+          <button id="clear-search-btn" onclick="clearSearch()" style="display:none;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="search-filters-bar">
+        <div class="filter-group">
+          <label>Category:</label>
+          <select id="search-cat-filter" onchange="handleSearch()">
+            <option value="ALL">All Categories</option>
+            <option value="HOODIES">Hoodies & Fleece</option>
+            <option value="TEES">Oversized Tees</option>
+            <option value="TROUSERS">Pants & Trousers</option>
+            <option value="OVERSHIRTS">Overshirts & Outerwear</option>
+            <option value="KNITS">Basics & Knits</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Fabric Weight (GSM):</label>
+          <select id="search-gsm-filter" onchange="handleSearch()">
+            <option value="ALL">All Weights</option>
+            <option value="HEAVY">Heavyweight (400+ GSM)</option>
+            <option value="MID">Midweight (250–399 GSM)</option>
+            <option value="LIGHT">Lightweight (&lt; 250 GSM)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Sort By:</label>
+          <select id="search-sort-filter" onchange="handleSearch()">
+            <option value="featured">Featured First</option>
+            <option value="gsm-desc">Highest GSM Weight</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-results-container">
+        <div class="results-meta">
+          <span id="results-count">Showing 6 styles</span>
+        </div>
+        <div class="product-grid" id="search-results-grid">
+          <!-- Dynamic -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: WISHLIST PAGE -->
+    <section id="tab-wishlist" class="page-tab">
+      <div class="wishlist-header">
+        <span class="section-label">BUYER SHORTLIST</span>
+        <h2>Saved Wholesale Styles</h2>
+        <p>Shortlist blanks for buying review meetings and send a combined volume quote inquiry via WhatsApp.</p>
+      </div>
+
+      <div id="wishlist-empty-state" class="empty-state">
+        <div class="empty-icon"><i class="fa-regular fa-bookmark"></i></div>
+        <h3>Your Shortlist is Empty</h3>
+        <p>Click the bookmark icon on any style to save it here for bulk price quote requests.</p>
+        <button class="btn-primary" onclick="navigateTo('home')">Browse Wholesale Line</button>
+      </div>
+
+      <div id="wishlist-content" class="wishlist-content" style="display:none;">
+        <div class="bulk-quote-card">
+          <div>
+            <h3><i class="fa-brands fa-whatsapp"></i> Multi-Style WhatsApp Inquiry</h3>
+            <p>Send all saved styles to our production team in one structured inquiry with your specifications.</p>
+          </div>
+          <button class="btn-whatsapp-banner" onclick="requestMultiStyleQuote()">
+            <i class="fa-brands fa-whatsapp"></i> Request Combined Bulk Quote
+          </button>
+        </div>
+
+        <div class="wishlist-items-list" id="wishlist-items-list">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: ACCOUNT & WHOLESALE HUB PAGE -->
+    <section id="tab-account" class="page-tab">
+      <div class="account-header">
+        <span class="section-label">B2B PORTAL</span>
+        <h2>Wholesale Buyer Hub & Policies</h2>
+      </div>
+
+      <div class="account-grid">
+        <!-- Buyer Profile Card -->
+        <div class="account-card">
+          <div class="card-header-row">
+            <div class="buyer-avatar"><i class="fa-solid fa-briefcase"></i></div>
+            <div>
+              <h3 id="display-brand-name">Studio A Atelier</h3>
+              <span class="verified-tag"><i class="fa-solid fa-check"></i> Verified Wholesale Partner</span>
+            </div>
+            <button class="btn-outline-small" onclick="toggleEditProfile()">Edit</button>
+          </div>
+
+          <div id="profile-display-view">
+            <div class="profile-info-row">
+              <span class="label">Contact Person:</span>
+              <span class="value" id="display-buyer-name">Elena Rostova</span>
+            </div>
+            <div class="profile-info-row">
+              <span class="label">Tax / VAT ID:</span>
+              <span class="value" id="display-tax-id">US-94810283</span>
+            </div>
+            <div class="profile-info-row">
+              <span class="label">Destination Port:</span>
+              <span class="value" id="display-port">Los Angeles, CA (USA)</span>
+            </div>
+            <div class="profile-info-row">
+              <span class="label">Wholesale Tier:</span>
+              <span class="value">Tier 1 Boutique Partner (MOQ 50 pcs)</span>
+            </div>
+          </div>
+
+          <form id="profile-edit-view" style="display:none;" onsubmit="saveProfile(event)">
+            <div class="form-group">
+              <label>Brand / Store Name</label>
+              <input type="text" id="input-brand-name" value="Studio A Atelier" required>
+            </div>
+            <div class="form-group">
+              <label>Buyer Contact Name</label>
+              <input type="text" id="input-buyer-name" value="Elena Rostova" required>
+            </div>
+            <div class="form-group">
+              <label>Reseller Tax ID / VAT</label>
+              <input type="text" id="input-tax-id" value="US-94810283">
+            </div>
+            <div class="form-group">
+              <label>Destination City / Country</label>
+              <input type="text" id="input-port" value="Los Angeles, CA (USA)">
+            </div>
+            <button type="submit" class="btn-primary-small">Save Details</button>
+          </form>
+        </div>
+
+        <!-- Factory WhatsApp Hotline -->
+        <div class="account-card hotline-card">
+          <div class="hotline-badge"><i class="fa-brands fa-whatsapp"></i> DIRECT FACTORY LINE</div>
+          <h3>WhatsApp Wholesale Desk: +1 (555) 892-3412</h3>
+          <p>
+            Connect directly with our senior merchandising team to coordinate physical fabric swatches, digital tech packs, sample proofs, and container shipment tracking.
+          </p>
+          <button class="btn-whatsapp-banner" onclick="openDirectWholesaleChat('Buyer Wholesale Account Inquiry')">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+          </button>
+        </div>
+
+        <!-- Wholesale Ordering Terms & FAQ -->
+        <div class="account-card full-span">
+          <h3>Wholesale Production Policies & Terms</h3>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>What is the Minimum Order Quantity (MOQ)?</summary>
+              <p>Standard catalog MOQ is 50 pieces per style/color. We accommodate standard carton split ratios (e.g. 1:2:2:1 for S:M:L:XL). Custom Pantone lab dip dyeing requires 150 pieces per colorway.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How does Sample Ordering work?</summary>
+              <p>Individual fit and fabric sample pieces are dispatched via DHL Express in 5–7 business days ($25–$50 per unit depending on silhouette). 100% of sample fees are credited toward your subsequent bulk run.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Private Labeling & Custom Packaging</summary>
+              <p>Every piece can be delivered unbranded blank or customized with high-definition woven neck labels, organic care tags, and custom printed frosted polybags featuring your brand logo.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Production Timelines & Shipping Methods</summary>
+              <p>Stock blanks dispatch in 3–5 business days. Custom labeled/printed production runs require 12–15 business days. We provide global DDP (Delivered Duty Paid) air freight (4–6 days) and ocean container shipping.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PRODUCT DETAIL MODAL / DRAWER (WITH DIRECT WHATSAPP ORDERING) -->
+  <div class="modal-backdrop" id="product-modal-backdrop" onclick="closeProductModal(event)">
+    <div class="modal-card" id="product-modal-card">
+      <button class="modal-close-btn" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-body" id="modal-body-content">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM MOBILE NAVIGATION BAR -->
+  <div class="mobile-bottom-nav">
+    <div class="mobile-nav-item active" data-tab="home" onclick="navigateTo('home')">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </div>
+    <div class="mobile-nav-item" data-tab="search" onclick="navigateTo('search')">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Search</span>
+    </div>
+    <div class="mobile-nav-item" data-tab="wishlist" onclick="navigateTo('wishlist')">
+      <i class="fa-solid fa-bookmark"></i>
+      <span>Wishlist</span>
+      <span class="mobile-badge" id="mobile-wishlist-badge">0</span>
+    </div>
+    <div class="mobile-nav-item" data-tab="account" onclick="navigateTo('account')">
+      <i class="fa-solid fa-building"></i>
+      <span>Account</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">FLEEX</div>
+        <div class="footer-sub">FLEEXGARMENTS.COM</div>
+        <p>Premium wholesale apparel manufacturer specializing in custom heavyweight fleece, oversized cotton basics, and tailored streetwear silhouettes for worldwide boutique labels.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Wholesale Lines</h4>
+        <ul>
+          <li><a href="#" onclick="filterCategory('HOODIES'); navigateTo('home'); return false;">Heavyweight Fleece (500 GSM)</a></li>
+          <li><a href="#" onclick="filterCategory('TEES'); navigateTo('home'); return false;">Boxy Drop-Shoulder Tees (280 GSM)</a></li>
+          <li><a href="#" onclick="filterCategory('TROUSERS'); navigateTo('home'); return false;">Utility Cargo Trousers</a></li>
+          <li><a href="#" onclick="filterCategory('OVERSHIRTS'); navigateTo('home'); return false;">Artisanal Linen Overshirts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Wholesale Contact</h4>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +1 (555) 892-3412</p>
+        <p><i class="fa-solid fa-envelope"></i> wholesale@fleexgarments.com</p>
+        <p><i class="fa-solid fa-globe"></i> Official Portal: FLEEXGARMENTS.COM</p>
+        <p><i class="fa-solid fa-location-dot"></i> Factory Milling & Export Division</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fleex Garments Wholesale International. All rights reserved. Colors: #123F36 • #2A6B5C • #C49A45 • #E8DCC4.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
